@@ -31,26 +31,30 @@ module.exports = (sequelize, DataTypes) => {
   };
   SetTime.init({
     set_time_id: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.INTEGER, 
       primaryKey: true,
       autoIncrement: true
     },
-    name: {
-        type: DataTypes.STRING,
-        allowNull: false
+    event_id: {
+      type: DataTypes.SMALLINT,
+      allowNull: false
     },
-    genre: {
-        type: DataTypes.TEXT,
-        allowNull: false
+    stage_id: {
+      type: DataTypes.SMALLINT,
+      allowNull: false
     },
-    available_start_time: {
-        type: DataTypes.DATE,
-        allowNull: false
+    band_id: {
+      type: DataTypes.SMALLINT,
+      allowNull: false
+    },
+    start_time: {
+      type: DataTypes.DATE,
+      allowNull: false
     },
     end_time: {
-        type: DataTypes.DATE,
-        allowNull: false
-    }
+      type: DataTypes.DATE,
+      allowNull: false
+    },
   }, {
     sequelize,
     modelName: 'SetTime',

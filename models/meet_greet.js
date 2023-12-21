@@ -29,21 +29,21 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
       autoIncrement: true
     },
-    name: {
-        type: DataTypes.STRING,
-        allowNull: false
+    event_id: {
+      type: DataTypes.SMALLINT,
+      allowNull: false
     },
-    genre: {
-        type: DataTypes.TEXT,
-        allowNull: false
+    band_id: {
+      type: DataTypes.SMALLINT,
+      allowNull: false
     },
-    available_start_time: {
-        type: DataTypes.DATE,
-        allowNull: false
+    meet_start_time: {
+      type: DataTypes.DATE,
+      allowNull: false
     },
-    end_time: {
-        type: DataTypes.DATE,
-        allowNull: false
+    meet_end_time: {
+      type: DataTypes.DATE,
+      allowNull: false
     }
   }, {
     sequelize,
