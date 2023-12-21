@@ -9,17 +9,9 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      name: {
-        type: Sequelize.STRING
-      },
-      genre: {
-        type: Sequelize.TEXT
-      },
-      available_start_time: {
-        type: Sequelize.DATE
-      },
-      end_time: {
-        type: Sequelize.DATE
+      stage_name: {
+        type: Sequelize.STRING,
+        allowNull: false,
       }
     });
   },

@@ -9,17 +9,25 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      name: {
-        type: Sequelize.STRING
+      event_id: {
+        type: Sequelize.SMALLINT,
+        allowNull: false
       },
-      genre: {
-        type: Sequelize.TEXT
+      stage_id: {
+        type: Sequelize.SMALLINT,
+        allowNull: false
       },
-      available_start_time: {
-        type: Sequelize.DATE
+      band_id: {
+        type: Sequelize.SMALLINT,
+        allowNull: false
+      },
+      start_time: {
+        type: Sequelize.DATE,
+        allowNull: false
       },
       end_time: {
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        allowNull: false
       }
     });
   },

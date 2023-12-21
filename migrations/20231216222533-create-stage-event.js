@@ -3,23 +3,19 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('stage_events', {
-      stage_event_id: {
+      stage_events_id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      name: {
-        type: Sequelize.STRING
+      stage_id: {
+        type: Sequelize.SMALLINT,
+        allowNull: false
       },
-      genre: {
-        type: Sequelize.TEXT
-      },
-      available_start_time: {
-        type: Sequelize.DATE
-      },
-      end_time: {
-        type: Sequelize.DATE
+      event_id: {
+        type: Sequelize.SMALLINT,
+        allowNull: false
       }
     });
   },
